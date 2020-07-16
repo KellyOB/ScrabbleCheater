@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		BEF8304724C0057100F50974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8304624C0057100F50974 /* AppDelegate.swift */; };
 		BEF8304924C0057100F50974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8304824C0057100F50974 /* SceneDelegate.swift */; };
-		BEF8304B24C0057100F50974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8304A24C0057100F50974 /* ViewController.swift */; };
 		BEF8304E24C0057100F50974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF8304C24C0057100F50974 /* Main.storyboard */; };
 		BEF8305024C0057400F50974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF8304F24C0057400F50974 /* Assets.xcassets */; };
 		BEF8305324C0057400F50974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF8305124C0057400F50974 /* LaunchScreen.storyboard */; };
+		BEF8305B24C005D600F50974 /* RackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8305A24C005D600F50974 /* RackViewController.swift */; };
+		BEF8305D24C006E700F50974 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */; };
+		BEF8305F24C00E9900F50974 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8305E24C00E9900F50974 /* Tile.swift */; };
+		BEF8306124C00F7100F50974 /* Scrabble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8306024C00F7100F50974 /* Scrabble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BEF8304324C0057100F50974 /* ScrabbleCheater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrabbleCheater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF8304624C0057100F50974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF8304824C0057100F50974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEF8304A24C0057100F50974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEF8304D24C0057100F50974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEF8304F24C0057400F50974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEF8305224C0057400F50974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEF8305424C0057400F50974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF8305A24C005D600F50974 /* RackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RackViewController.swift; sourceTree = "<group>"; };
+		BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEF8305E24C00E9900F50974 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		BEF8306024C00F7100F50974 /* Scrabble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrabble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 			children = (
 				BEF8304624C0057100F50974 /* AppDelegate.swift */,
 				BEF8304824C0057100F50974 /* SceneDelegate.swift */,
-				BEF8304A24C0057100F50974 /* ViewController.swift */,
 				BEF8304C24C0057100F50974 /* Main.storyboard */,
+				BEF8305A24C005D600F50974 /* RackViewController.swift */,
+				BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */,
+				BEF8305E24C00E9900F50974 /* Tile.swift */,
+				BEF8306024C00F7100F50974 /* Scrabble.swift */,
 				BEF8304F24C0057400F50974 /* Assets.xcassets */,
 				BEF8305124C0057400F50974 /* LaunchScreen.storyboard */,
 				BEF8305424C0057400F50974 /* Info.plist */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF8304B24C0057100F50974 /* ViewController.swift in Sources */,
+				BEF8305D24C006E700F50974 /* TileCollectionViewCell.swift in Sources */,
 				BEF8304724C0057100F50974 /* AppDelegate.swift in Sources */,
+				BEF8305F24C00E9900F50974 /* Tile.swift in Sources */,
 				BEF8304924C0057100F50974 /* SceneDelegate.swift in Sources */,
+				BEF8305B24C005D600F50974 /* RackViewController.swift in Sources */,
+				BEF8306124C00F7100F50974 /* Scrabble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
