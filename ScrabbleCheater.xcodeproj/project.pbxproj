@@ -16,6 +16,9 @@
 		BEF8305D24C006E700F50974 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */; };
 		BEF8305F24C00E9900F50974 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8305E24C00E9900F50974 /* Tile.swift */; };
 		BEF8306124C00F7100F50974 /* Scrabble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8306024C00F7100F50974 /* Scrabble.swift */; };
+		BEF8306324C0C9D100F50974 /* CheatListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8306224C0C9D100F50974 /* CheatListTableViewController.swift */; };
+		BEF8306824C0CFF600F50974 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8306724C0CFF600F50974 /* Trie.swift */; };
+		BEF8306C24C13D9800F50974 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEF8306B24C13D9700F50974 /* dictionary.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEF8305E24C00E9900F50974 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		BEF8306024C00F7100F50974 /* Scrabble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrabble.swift; sourceTree = "<group>"; };
+		BEF8306224C0C9D100F50974 /* CheatListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatListTableViewController.swift; sourceTree = "<group>"; };
+		BEF8306724C0CFF600F50974 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		BEF8306B24C13D9700F50974 /* dictionary.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +70,43 @@
 			children = (
 				BEF8304624C0057100F50974 /* AppDelegate.swift */,
 				BEF8304824C0057100F50974 /* SceneDelegate.swift */,
-				BEF8304C24C0057100F50974 /* Main.storyboard */,
-				BEF8305A24C005D600F50974 /* RackViewController.swift */,
-				BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */,
-				BEF8305E24C00E9900F50974 /* Tile.swift */,
-				BEF8306024C00F7100F50974 /* Scrabble.swift */,
+				BEF8306B24C13D9700F50974 /* dictionary.txt */,
+				BEF8306624C0CB9E00F50974 /* Model */,
+				BEF8306424C0CB3B00F50974 /* View */,
+				BEF8306524C0CB4700F50974 /* Controller */,
 				BEF8304F24C0057400F50974 /* Assets.xcassets */,
 				BEF8305124C0057400F50974 /* LaunchScreen.storyboard */,
 				BEF8305424C0057400F50974 /* Info.plist */,
 			);
 			path = ScrabbleCheater;
+			sourceTree = "<group>";
+		};
+		BEF8306424C0CB3B00F50974 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEF8304C24C0057100F50974 /* Main.storyboard */,
+				BEF8305C24C006E700F50974 /* TileCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BEF8306524C0CB4700F50974 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEF8305A24C005D600F50974 /* RackViewController.swift */,
+				BEF8306224C0C9D100F50974 /* CheatListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BEF8306624C0CB9E00F50974 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEF8305E24C00E9900F50974 /* Tile.swift */,
+				BEF8306724C0CFF600F50974 /* Trie.swift */,
+				BEF8306024C00F7100F50974 /* Scrabble.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +169,7 @@
 			files = (
 				BEF8305324C0057400F50974 /* LaunchScreen.storyboard in Resources */,
 				BEF8305024C0057400F50974 /* Assets.xcassets in Resources */,
+				BEF8306C24C13D9800F50974 /* dictionary.txt in Resources */,
 				BEF8304E24C0057100F50974 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,10 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF8305D24C006E700F50974 /* TileCollectionViewCell.swift in Sources */,
+				BEF8306824C0CFF600F50974 /* Trie.swift in Sources */,
 				BEF8304724C0057100F50974 /* AppDelegate.swift in Sources */,
 				BEF8305F24C00E9900F50974 /* Tile.swift in Sources */,
 				BEF8304924C0057100F50974 /* SceneDelegate.swift in Sources */,
 				BEF8305B24C005D600F50974 /* RackViewController.swift in Sources */,
+				BEF8306324C0C9D100F50974 /* CheatListTableViewController.swift in Sources */,
 				BEF8306124C00F7100F50974 /* Scrabble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kismetdevelopment.ScrabbleCheater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kismetdevelopment.ScrabbleCheater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

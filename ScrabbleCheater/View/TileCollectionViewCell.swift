@@ -8,9 +8,9 @@
 
 import UIKit
 
-class TileCollectionViewCell: UICollectionViewCell {
-    
+class TileCollectionViewCell: UICollectionViewCell {    
     @IBOutlet weak var tileLetterLabel: UILabel!
+    @IBOutlet weak var tileValueLabel: UILabel!    
 }
 
 extension UICollectionViewCell {
