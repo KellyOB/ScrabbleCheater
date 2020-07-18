@@ -20,7 +20,6 @@ class RackViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return lettersChosen.count
     }
 
@@ -29,13 +28,12 @@ class RackViewController: UICollectionViewController {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TileCell", for: indexPath) as? TileCollectionViewCell {
             cell.shadowDecorate()
             cell.tileLetterLabel.text = lettersChosen[indexPath.row].uppercased()
-            
+                        
             if let tile = Tile.init(letter: lettersChosen[indexPath.row]).tileValue {
                  cell.tileValueLabel.text = String(tile)
             } else {
                 cell.tileValueLabel.text = "0"
             }
-
             return cell
         }
         return UICollectionViewCell()
@@ -44,35 +42,25 @@ class RackViewController: UICollectionViewController {
     // MARK: IBActions
     @IBAction func refreshButtonPressed(_ sender: Any) {
         lettersChosen = Scrabble.shared.chooseNewLetters()
-        print("from refresh button pressed: \(lettersChosen)")
         collectionView.reloadData()
     }
     
     @IBAction func cheatButtonPressed(_ sender: UIButton) {
-//        print("5a. triggered when cheat button pressed... calls fidWords func")
-//        Scrabble.shared.makeWordsArray()
-//        
-//        let wordsArray = Scrabble.shared.findWords()
-//         print("words array printed when cheat button pressed: \(wordsArray)")
         performSegue(withIdentifier: "toCheatList", sender: wordsArray)
-       
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("5a. triggered when prepare to segue... calls fidWords func")
         if segue.identifier == "toCheatList" {
             let destinationVC = segue.destination as! CheatListTableViewController
-            let rack = lettersChosen.joined()
-            destinationVC.rackLetters = rack
+            
+            let rackLetters = lettersChosen.joined()
+            destinationVC.rackLetters = rackLetters
           
             let wordsArray = Scrabble.shared.findWords()
             destinationVC.wordsArray = wordsArray
-            print("5aaaa. words array printed from prepare for segue: \(wordsArray)")
-            
         }
     }
-    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

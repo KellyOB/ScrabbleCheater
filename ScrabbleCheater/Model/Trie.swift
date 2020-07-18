@@ -68,14 +68,11 @@ class Trie: NSObject, NSCoding {
     }
 }
 
-// MARK: - Adds methods: insert, remove, contains
 extension Trie {
 
     func insert(word: String) {
         guard !word.isEmpty else { return }
         
-        // PRINTS EVERY WORD IN DICT
-        //print("4c.  print word from Trie insert() \(word)")
         var currentNode = root
         for character in word.lowercased() {
             if let childNode = currentNode.children[character] {
@@ -193,8 +190,6 @@ extension Trie {
     
     func findWordsFromLettersArray(_ array: inout Array<Character>, start: Int, end: Int, results: inout Set<String>) {
         
-        // this gets FOR EVERY WORD IT THE DICTIONARY??????????????
-        //print("6.  gets called from Trie - findWordsFromLettersArray")
         var prefix = ""
         for i in 0..<start {
             prefix += String(array[i])
@@ -207,7 +202,6 @@ extension Trie {
         
         var i = start
         while words.count > 0 && i <= end {
-            
             swapValuesInCharacterArray(&array, index1: i, index2: start)
             findWordsFromLettersArray(&array, start: start+1, end: end, results: &results)
             swapValuesInCharacterArray(&array, index1: i, index2: start)
