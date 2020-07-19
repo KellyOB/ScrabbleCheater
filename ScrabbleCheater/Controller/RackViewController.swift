@@ -12,11 +12,13 @@ class RackViewController: UICollectionViewController {
 
     var lettersChosen: [String] = []
     var wordsArray = [String]()
+    //var fontSize : CGFloat = 150.0 // DEFAULT SIZE
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lettersChosen = Scrabble.shared.chooseNewLetters()
-    }
+}
     
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -27,6 +29,9 @@ class RackViewController: UICollectionViewController {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TileCell", for: indexPath) as? TileCollectionViewCell {
             cell.shadowDecorate()
+            
+//        cell.tileLetterLabel.adjustFontSizeForDevice()
+            
             cell.tileLetterLabel.text = lettersChosen[indexPath.row].uppercased()
                         
             if let tile = Tile.init(letter: lettersChosen[indexPath.row]).tileValue {
@@ -65,18 +70,35 @@ class RackViewController: UICollectionViewController {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension RackViewController: UICollectionViewDelegateFlowLayout {
+    
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        // number of columns desired
+//        let columns: CGFloat = 1
+//
+//        // Match spacing below
+//        let spacing: CGFloat = 5
+//        let totalVerticalSpacing = (columns) * spacing
+//        let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / columns
+//
+//        let size: CGSize = lettersChosen[indexPath.row].size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0)])
+//        return CGSize(width: size.width + 50.0, height: size.width + 50.0)
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+
         // number of columns desired
         let columns: CGFloat = 1
-        
+
         // Match spacing below
-        let spacing: CGFloat = 5
-        let totalVerticalSpacing = (columns) * spacing
-        
-        let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / columns
-        let itemSize = CGSize(width: itemHeight / 10, height: itemHeight / 10)
-        
+        //let spacing: CGFloat = 40
+        //let totalVerticalSpacing = (columns) * spacing
+
+        //let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / columns
+        let itemSize = CGSize(width: collectionView.bounds.height / 10, height: collectionView.bounds.height / 10)
+
         return itemSize
     }
     
@@ -90,3 +112,4 @@ extension RackViewController: UICollectionViewDelegateFlowLayout {
         return 15
     }
 }
+

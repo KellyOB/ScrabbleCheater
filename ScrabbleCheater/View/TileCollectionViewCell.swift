@@ -10,23 +10,55 @@ import UIKit
 
 class TileCollectionViewCell: UICollectionViewCell {    
     @IBOutlet weak var tileLetterLabel: UILabel!
-    @IBOutlet weak var tileValueLabel: UILabel!    
-}
+    @IBOutlet weak var tileValueLabel: UILabel!
 
-extension UICollectionViewCell {
-    func shadowDecorate() {
-        let radius: CGFloat = 10
-        contentView.layer.cornerRadius = radius
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.clear.cgColor
-        contentView.layer.masksToBounds = true
-        
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        layer.shadowRadius = 2.0
-        layer.shadowOpacity = 0.5
-        layer.masksToBounds = false
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
-        layer.cornerRadius = radius
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //tileLetterLabel.adjustFontSizeForDevice()
     }
 }
+
+//enum DeviceSize {
+//    case big, medium, small
+//}
+//
+//protocol Fontadjustable {
+//
+//    var devicetype: DeviceSize { get }
+//
+//    func adjustFontSizeForDevice()
+//}
+//
+//extension UILabel: Fontadjustable {
+//
+//    var devicetype: DeviceSize {
+//        switch UIScreen.main.nativeBounds.height {
+//        case 736:
+//            print("small")
+//            return .small
+//        case 1334:
+//            print("medium")
+//            return .medium
+//        case 1920:
+//            print("big1")
+//            return .big
+//        case 500...2208:
+//            print("big2")
+//            return .big
+//        default:
+//            print("default")
+//            return .small
+//        }
+//    }
+//
+//    func adjustFontSizeForDevice() {
+//        switch self.devicetype {
+//        case .small:
+//            self.font = font.withSize(font.pointSize)
+//        case .medium:
+//            self.font = font.withSize(font.pointSize + 80)
+//        case .big:
+//            self.font = font.withSize(font.pointSize + 80)
+//        }
+//    }
+//}
