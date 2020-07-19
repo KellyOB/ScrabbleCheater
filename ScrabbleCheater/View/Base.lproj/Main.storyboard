@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cB0-p1-hUE">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="cB0-p1-hUE">
                             <size key="itemSize" width="74" height="74"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -24,7 +24,7 @@
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TileCell" id="gmt-K8-n2S" customClass="TileCollectionViewCell" customModule="ScrabbleCheater" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ifa-Xt-dDD">
                                     <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +52,6 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.90588235294117647" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="74" height="74"/>
                                 <connections>
                                     <outlet property="tileLetterLabel" destination="tKy-4n-P9c" id="jMI-bp-MVP"/>
                                     <outlet property="tileValueLabel" destination="aE6-kq-rTg" id="f8o-en-B3y"/>

@@ -12,11 +12,14 @@ class RackViewController: UICollectionViewController {
 
     var lettersChosen: [String] = []
     var wordsArray = [String]()
-    //var fontSize : CGFloat = 150.0 // DEFAULT SIZE
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            if #available(iOS 11.0, *) {
+                flowLayout.sectionInsetReference = .fromSafeArea
+            }
+        }
         lettersChosen = Scrabble.shared.chooseNewLetters()
 }
     
@@ -83,28 +86,49 @@ extension RackViewController: UICollectionViewDelegateFlowLayout {
 //        let totalVerticalSpacing = (columns) * spacing
 //        let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / columns
 //
+//        let itemSize = CGSize(width: collectionView.bounds.height / 10, height: collectionView.bounds.height / 10)
+//
 //        let size: CGSize = lettersChosen[indexPath.row].size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0)])
 //        return CGSize(width: size.width + 50.0, height: size.width + 50.0)
 //    }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        // number of columns desired
+//        let columns: CGFloat = 1
+//
+//        // Match spacing below
+//        //let spacing: CGFloat = 40
+//        //let totalVerticalSpacing = (columns) * spacing
+//
+//        //let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / columns
+//        let itemSize = CGSize(width: collectionView.bounds.height / 10, height: collectionView.bounds.height / 10)
+//
+//        return itemSize
+//    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        // number of columns desired
-        let columns: CGFloat = 1
-
-        // Match spacing below
-        //let spacing: CGFloat = 40
-        //let totalVerticalSpacing = (columns) * spacing
-
-        //let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / columns
-        let itemSize = CGSize(width: collectionView.bounds.height / 10, height: collectionView.bounds.height / 10)
-
-        return itemSize
-    }
+        
+       //collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        //view.sectionInsetReference = .fromSafeArea
+       // collectionView.contentInset = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 30.0, right: 10.0)
+        //collectionView.adjustedContentInset = UIEdgeInsets(top: 74.0, left: 10.0, bottom: 59.0, right: 10.0)
+        
+        let rows: CGFloat = 7
+    
+        let spacing: CGFloat = 24
+    
+        let totalVerticalSpacing = (2 * spacing) + ((rows - 1) * spacing)
+    
+    
+        let itemHeight = (collectionView.bounds.height - totalVerticalSpacing) / rows
+   print(itemHeight)
+        let itemSize = CGSize(width: itemHeight, height: itemHeight * 1)
+    return itemSize
+}
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         // horizontal space between items
-        return 250
+        return 300
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
