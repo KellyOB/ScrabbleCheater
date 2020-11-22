@@ -20,6 +20,6 @@ Remember, each time a letter is given to the user it must be removed from the ba
 *  You can use arrays for other parts of the app, just not for word matching/dictionary storage
 The user can tap restart or type "restart" to restart the game and get 7 new letters
 
-#Screenshots
+# Screenshots
 
 <img src= "https://user-images.githubusercontent.com/32715761/99891081-eeacb580-2c1a-11eb-9ded-f39e30bef999.png" width="200" hspace="10" \> <img src= "https://user-images.githubusercontent.com/32715761/99891113-4519f400-2c1b-11eb-81ae-7e5d751e44f4.png" width="200" hspace="30" \>
