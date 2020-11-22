@@ -1,7 +1,7 @@
-# ScrabbleCheater
+# Scrabble Cheater
 Week 11 Exercise for Devslopes Academy
 
-Exercise was to build a Scrabble Cheeating app.
+Build a Scrabble Cheating app.
 
 1. When the game starts the user is given 7 letters at random. 
 These letters must be picked from a "bag" -- meaning you don't just randomly pick from an infinite amount of letters, but pick from the bag just like in the real life game. See the details on bag size below
