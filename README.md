@@ -4,6 +4,7 @@ Week 11 Exercise for Devslopes Academy
 Build a Scrabble Cheating app.
 
 # Requirements
+
 * When the game starts the user is given 7 letters at random. 
 These letters must be picked from a "bag" -- meaning you don't just randomly pick from an infinite amount of letters, but pick from the bag just like in the real life game. See the details on bag size below.
 Remember, each time a letter is given to the user it must be removed from the bag before you can give another at random
@@ -20,3 +21,5 @@ Remember, each time a letter is given to the user it must be removed from the ba
 The user can tap restart or type "restart" to restart the game and get 7 new letters
 
 #Screenshots
+
+<img src= "https://user-images.githubusercontent.com/32715761/99891081-eeacb580-2c1a-11eb-9ded-f39e30bef999.png" width="200" hspace="10" \>
